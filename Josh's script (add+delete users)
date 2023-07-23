@@ -27,3 +27,4 @@ filename="delAdmin.txt"
 while IFS= read -r line; do
    sudo deluser "$line" sudo
 done < "$filename"
+//change
