@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 allowed_file="allowed.txt"
 users_file="users.txt"
 
