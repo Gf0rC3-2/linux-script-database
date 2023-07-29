@@ -10,3 +10,4 @@ users_to_add=$(comm -13 <(sort "$users_file") <(sort "$allowed_file"))
 read -p "Are you sure you want to delete the following users: $users_to_delete? (y/n) " confirm_delete
 if [[ $confirm_delete == "y" ]]; then
     vim
+#edit
