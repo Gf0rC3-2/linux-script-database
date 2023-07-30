@@ -96,4 +96,4 @@ sed -i 's/PASS_WARN_AGE\t7/PASS_WARN_AGE\t14/' /etc/login.defs
 
 
 echo "Password policy has been updated."
-
+#change
