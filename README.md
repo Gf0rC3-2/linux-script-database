@@ -30,5 +30,6 @@ echo "Hello, Mensa Pythons!"
 ```
 
 # Important stuff to do
-> [x] Finish forensics
-> [ ] Go camping ⛺ 
+> - [x] Finish forensics
+> 
+> - [ ] Go camping ⛺ 
