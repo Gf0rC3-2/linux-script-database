@@ -8,3 +8,9 @@ okie
 ```python
 print("Hello world")
 ```
+```javascript
+var mensapythonsisawesome = true
+if(mensapythonsisawesome){
+window.alert("Yay!");
+}
+```
