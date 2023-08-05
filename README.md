@@ -36,7 +36,7 @@ echo "Hello, Mensa Pythons!"
 >
 
 # TO ~OLIVER~ KEVIN
-~dont remove this or~ the muffin man is coming for kevin
+~dont remove this or~ the muffin man is coming for ~u~ kevin
 
 # ~LOLOLOLOLOLOLOLOLOLOLOLKOLOLOLOLOL~
 ~waudhuaehdgewybgrachxne3uxrdfhuaisehmfduheuidfmhzweiujdfwmjedajeudj~
