@@ -35,7 +35,7 @@ echo "Hello, Mensa Pythons!"
 > - [ ] Go camping ⛺
 >
 
-# TO OLIVER
+# TO ~OLIVER~ KEVIN
 ~dont remove this or~ the muffin man is coming for kevin
 
 # ~LOLOLOLOLOLOLOLOLOLOLOLKOLOLOLOLOL~
