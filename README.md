@@ -29,7 +29,6 @@ find /path/to/search -type f -name "*.txt"
 echo "Hello, Mensa Pythons!"
 ```
 
-# Kevin's secret message
-### YEET
-IF YOU FOUND THIS TAKE A SCREENSHOT AND POST IT [HERE](https://mail.google.com/chat/u/0/#chat/space/AAAAtzsb8WE)!
-LOLOLOLOLOLOLOLOLOLOLOLOXZJCMLKFEIEFJHUWFefessfasefgjesfnhuewnrufgsalh
+# Important stuff to do
+> [x] Finish forensics
+> [ ] Go camping ⛺ 
