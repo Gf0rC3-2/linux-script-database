@@ -8,11 +8,11 @@ okie
 
 ### Example code
 ```python
->print("Hello world")
+print("Hello world")
 ```
 ```javascript
->var mensapythonsisawesome = true
->if(mensapythonsisawesome){
->window.alert("Yay!");
->}
+var mensapythonsisawesome = true
+if(mensapythonsisawesome){
+window.alert("Yay!");
+}
 ```
