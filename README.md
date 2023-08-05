@@ -15,7 +15,7 @@ Welcome to the Mensa Pythons GitHub repository! This repository is used to share
 
 ```bash
 ls
-```
+``` 
  
 ### Example 2: Find all files with a specific extension
 ```bash
