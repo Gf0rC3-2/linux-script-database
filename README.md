@@ -1,22 +1,33 @@
-# linux-script-database
-this is where all our **scripts** are
+# Mensa Pythons GitHub
 
-## MESSAGE FROM KEVIN
-**lol** 🤣
+Welcome to the Mensa Pythons GitHub repository! This repository is used to share scripts, logs, and other resources for our cybersecurity competition based in Ubuntu. Here, we collaborate as a team to strengthen our skills, enhance our security measures, and **blah blah blah ChatGPT made this and its too cringe**
 
-### Example code
-```python
-print("Hello world")
+## Contents
+
+- Scripts
+- Logs
+- Commands
+- thats basically it
+
+## Command Examples
+
+### Example 1: List all files in the current directory
+
+```bash
+ls
 ```
-```javascript
-var mensapythonsisawesome = true
-if(mensapythonsisawesome){
-window.alert("Yay!");
-}
+
+### Example 2: Find all files with a specific extension
+```bash
+find /path/to/search -type f -name "*.txt"
 ```
 
-# Nice things to do
-> - Don't insult your teammates.
-> - ChatGPT can't' always be trusted. If a command
->  from ChatGPT dosen't work, don't panic.
-> - To make another of these, use \> \-
+### Example 1: Simple Bash Script
+```bash
+#!/bin/bash
+
+echo "Hello, Mensa Pythons!"
+```
+
+# Kevin's secret message
+### YEET
