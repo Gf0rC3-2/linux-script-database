@@ -32,4 +32,12 @@ echo "Hello, Mensa Pythons!"
 # Important stuff to do
 > - [x] Finish forensics
 > 
-> - [ ] Go camping ⛺ 
+> - [ ] Go camping ⛺
+>
+
+# TO OLIVER
+dont remove this or the muffin man is coming for u
+
+# LOLOLOLOLOLOLOLOLOLOLOLKOLOLOLOLOL
+waudhuaehdgewybgrachxne3uxrdfhuaisehmfduheuidfmhzweiujdfwmjedajeudj
+spammmmmmmmm
