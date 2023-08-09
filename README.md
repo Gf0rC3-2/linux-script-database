@@ -41,3 +41,4 @@ echo "Hello, Mensa Pythons!"
 # ~LOLOLOLOLOLOLOLOLOLOLOLKOLOLOLOLOL~
 ~waudhuaehdgewybgrachxne3uxrdfhuaisehmfduheuidfmhzweiujdfwmjedajeudj~
 ~spammmmmmmmm~
+>[Our Chat](mail.google.com/chat/u/0/#chat/space/AAAAtzsb8we)
