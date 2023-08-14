@@ -31,14 +31,10 @@ echo "Hello, Mensa Pythons!"
 
 # Important stuff to do
 > - [x] Finish forensics
-> 
+> - [x] Finish image
 > - [ ] Go camping ⛺
+> - [ ] Pineapple apple pen
 >
-
-# TO ~OLIVER~ KEVIN
-~dont remove this or~ the muffin man is coming for ~u~ kevin
-
-# ~LOLOLOLOLOLOLOLOLOLOLOLKOLOLOLOLOL~
-~waudhuaehdgewybgrachxne3uxrdfhuaisehmfduheuidfmhzweiujdfwmjedajeudj~
-~spammmmmmmmm~
->[Our Chat](mail.google.com/chat/u/0/#chat/space/AAAAtzsb8we)
+> PINEAPPLE APPLE PEN
+>
+>YAAARRGGGHHHHH WE'RE NOT ALLOWED TO PUT OUR CHAT LINK ANYWHERE
