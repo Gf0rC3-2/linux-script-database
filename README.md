@@ -1,6 +1,7 @@
 # Mensa Pythons GitHub
 
 Welcome to the Mensa Pythons GitHub repository! This repository is used to share scripts, logs, and other resources for our cybersecurity competition based in Ubuntu. Here, we collaborate as a team to strengthen our skills, enhance our security measures, and **blah blah blah ChatGPT made this and its too cringe**
+# IMPORTANT: [CLICK ME!](https://bit.ly/elon-musk-renames-twitter)
 
 ## Contents
 
