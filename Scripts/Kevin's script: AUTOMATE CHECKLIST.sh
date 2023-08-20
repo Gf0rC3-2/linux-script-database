@@ -1,4 +1,13 @@
+#!/bin/bash
+
 # Step 2: Update, Install ClamTk, and Enable Firewall
+echo "WARNING: This step will update the system, install ClamTk, and enable the firewall."
+read -p "Do you want to continue? (y/n): " update_confirm
+if [[ $update_confirm != "y" ]]; then
+    echo "Operation cancelled. Exiting..."
+    exit 1
+fi
+
 apt-get update
 apt-get upgrade -y
 apt-get install clamtk -y
@@ -55,43 +64,53 @@ else
     echo "File removal operation cancelled."
 fi
 
-# Step 6: Il package1 package2 package3
-
 # Step 7: Set Automatic Updates
-# Enable automatic updates for security updates
-sed -i 's/APT::Periodic::Update-Package-Lists "0";/APT::Periodic::Update-Package-Lists "1";/g' /etc/apt/apt.conf.d/20auto-upgrades
-sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades
+echo "WARNING: This step will enable automatic updates for security updates."
+read -p "Do you want to continue? (y/n): " update_confirm
+if [[ $update_confirm != "y" ]]; then
+    echo "Operation cancelled."
+else
+    # Enable automatic updates for security updates
+    sed -i 's/APT::Periodic::Update-Package-Lists "0";/APT::Periodic::Update-Package-Lists "1";/g' /etc/apt/apt.conf.d/20auto-upgrades
+    sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades
+    echo "Automatic updates have been enabled."
+fi
 
 # Step 8: Set Password Policy
-# Generate a random password
-generate_password() {
-   	pw_length=12  # Change the length as per your requirements  
-pw_characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-=_+"
-  	 password=$(tr -dc "$pw_characters" < /dev/urandom | fold -w "$pw_length" | head -n 1)
-  	 echo "$password"
-}
+echo "WARNING: This step will change the password policy."
+read -p "Do you want to continue? (y/n): " update_confirm
+if [[ $update_confirm != "y" ]]; then
+    echo "Operation cancelled."
+else
+    # Generate a random password
+    generate_password() {
+        pw_length=12  # Change the length as per your requirements  
+        pw_characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()"
+        password=$(tr -dc "$pw_characters" < /dev/urandom | fold -w "$pw_length" | head -n 1)
+        echo "$password"
+    }
 
-# Generate and apply new password to root and 'ubuntu' user
-new_password=$(generate_password)
+    # Generate and apply new password to root and 'ubuntu' user
+    new_password=$(generate_password)
 
-echo "Generated Password: $new_password"
+    echo "Generated Password: $new_password"
 
-# Change root password
-echo "Changing root password..."
-echo "root:$new_password" | sudo chpasswd
+    # Change root password
+    echo "Changing root password..."
+    echo "root:$new_password" | sudo chpasswd
 
-# Change 'ubuntu' user password
-echo "Changing 'ubuntu' user password..."
-echo "ubuntu:$new_password" | sudo chpasswd
+    # Change 'ubuntu' user password
+    echo "Changing 'ubuntu' user password..."
+    echo "ubuntu:$new_password" | sudo chpasswd
 
-# Display new passwords
-echo "New root password: $new_password"
-echo "New 'ubuntu' user password: $new_password"
+    # Display new passwords
+    echo "New root password: $new_password"
+    echo "New 'ubuntu' user password: $new_password"
 
-# Change the password policy in /etc/login.defs
-sed -i 's/PASS_MAX_DAYS\t99999/PASS_MAX_DAYS\t30/' /etc/login.defs
-sed -i 's/PASS_MIN_DAYS\t0/PASS_MIN_DAYS\t7/' /etc/login.defs
-sed -i 's/PASS_WARN_AGE\t7/PASS_WARN_AGE\t14/' /etc/login.defs
+    # Change the password policy in /etc/login.defs
+    sed -i 's/PASS_MAX_DAYS\t99999/PASS_MAX_DAYS\t30/' /etc/login.defs
+    sed -i 's/PASS_MIN_DAYS\t0/PASS_MIN_DAYS\t7/' /etc/login.defs
+    sed -i 's/PASS_WARN_AGE\t7/PASS_WARN_AGE\t14/' /etc/login.defs
 
-
-echo "Password policy has been updated."
+    echo "Password policy has been updated."
+fi
