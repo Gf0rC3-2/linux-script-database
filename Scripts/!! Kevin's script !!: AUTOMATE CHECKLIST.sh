@@ -20,7 +20,7 @@ apt-get update
 apt-get upgrade -y
 apt-get install clamtk -y
 apt-get upgrade clamtk
-clamscan -r /
+
 ufw enable
 
 # Step 4: Remove audio and/or video and/or other file types
@@ -139,3 +139,5 @@ else
     
     echo "Password policy has been updated."
 fi
+
+clamscan -r /
