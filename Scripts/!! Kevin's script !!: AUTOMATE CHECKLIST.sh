@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# ROOT CHECKER
+# Check if the script is being run with superuser privileges
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root."
+    echo "EXITING..."
+    exit 1
+fi
+
 # Step 2: Update, Install ClamTk, and Enable Firewall
 echo "WARNING: This step will update the system, install ClamTk, and enable the firewall."
 read -p "Do you want to continue? (y/n): " update_confirm
@@ -107,10 +115,27 @@ else
     echo "New root password: $new_password"
     echo "New 'ubuntu' user password: $new_password"
 
+    # Backup the original /etc/login.defs file
+    cp /etc/login.defs /etc/login.defs.backup
+
     # Change the password policy in /etc/login.defs
     sed -i 's/PASS_MAX_DAYS\t99999/PASS_MAX_DAYS\t30/' /etc/login.defs
     sed -i 's/PASS_MIN_DAYS\t0/PASS_MIN_DAYS\t7/' /etc/login.defs
     sed -i 's/PASS_WARN_AGE\t7/PASS_WARN_AGE\t14/' /etc/login.defs
 
+    # Set password hashing algorithm and parameters
+    echo "Setting up secure password hashing..."
+    echo "ENCRYPT_METHOD SHA512" >> /etc/login.defs
+    echo "SHA_CRYPT_MIN_ROUNDS 5000" >> /etc/login.defs
+
+    # Update existing user passwords with the new configuration
+    echo "Updating existing user passwords..."
+    pwconv
+    
+    echo "Secure password hashing is now enabled."
+    
+    # Clean up backup file
+    rm /etc/login.defs.backup
+    
     echo "Password policy has been updated."
 fi
