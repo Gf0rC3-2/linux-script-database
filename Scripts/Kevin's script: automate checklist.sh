@@ -1,5 +1,4 @@
-#!/bin/bash
-## Step 2: Update, Install ClamTk, and Enable Firewall
+# Step 2: Update, Install ClamTk, and Enable Firewall
 apt-get update
 apt-get upgrade -y
 apt-get install clamtk -y
@@ -96,4 +95,3 @@ sed -i 's/PASS_WARN_AGE\t7/PASS_WARN_AGE\t14/' /etc/login.defs
 
 
 echo "Password policy has been updated."
-#change
