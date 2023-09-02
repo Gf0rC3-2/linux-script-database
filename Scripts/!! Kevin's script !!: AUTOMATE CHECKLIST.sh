@@ -11,25 +11,28 @@ fi
 # Step 2: Update, Install ClamTk, and Enable Firewall
 echo "WARNING: This step will update the system, install ClamTk, and enable the firewall."
 read -p "Do you want to continue? (y/n): " update_confirm
-if [[ $update_confirm != "y" ]]; then
-    echo "Operation cancelled. Exiting..."
-    exit 1
+if [[ $update_confirm = "y" ]]; then
+    echo "Running..."
+    apt-get update
+    apt-get upgrade -y
+    apt-get install clamtk -y
+    apt-get upgrade clamtk
+    ufw enable
 fi
+    echo "Operation cancelled"
 
-apt-get update
-apt-get upgrade -y
-apt-get install clamtk -y
-apt-get upgrade clamtk
 
-ufw enable
+
 
 # Step 4: Remove audio and/or video and/or other file types
 # Prompt the user to select the files to remove
 echo "Which files do you want to remove?"
+echo "0. No files"
 echo "1. Audio files"
 echo "2. Video files"
 echo "3. Both audio and video files"
 echo "4. Other files (Specify file extensions)"
+
 
 read -p "Enter the corresponding number: " choice
 
@@ -40,6 +43,8 @@ other_extensions=""
 
 # Process user's choice
 case $choice in
+    0)
+        echo "Operation canceled"
     1)
         extensions="$audio_extensions"
         ;;
@@ -54,8 +59,7 @@ case $choice in
         extensions="$other_extensions"
         ;;
     *)
-        echo "Invalid choice. Exiting..."
-        exit 1
+        echo "Invalid choice. Operation canceled."
         ;;
 esac
 
