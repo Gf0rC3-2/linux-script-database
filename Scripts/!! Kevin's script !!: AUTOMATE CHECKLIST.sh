@@ -45,6 +45,7 @@ other_extensions=""
 case $choice in
     0)
         echo "Operation canceled"
+        ;;
     1)
         extensions="$audio_extensions"
         ;;
