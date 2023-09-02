@@ -2,7 +2,7 @@
 
 # ROOT CHECKER
 # Check if the script is being run with superuser privileges
-if [[ $EUID -ne 0 ]]; then
+if ["$EUID"  == "0"]; then
     echo "This script must be run as root."
     echo "EXITING..."
     exit 1
